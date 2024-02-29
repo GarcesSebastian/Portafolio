@@ -1,0 +1,82 @@
+---
+import Container from "./Container.astro"
+import ButtonIntroduction from "./ButtonIntroduction.astro"
+import type { Code, Debug } from "astro:components"
+
+// interface Props {
+// 	title: Array<string>;
+// 	href: Array<string>;
+// 	items: number;
+// }
+
+// const { href, title, items } = Astro.props;
+---
+
+<Container class=`${Astro.props.class}` {...Astro.props}>
+    <div class="no-visible flex justify-center items-center px-7 max-md:flex-col max-md:py-7">
+
+        <div id="info" class="flex flex-col gap-8">
+            <h1 class="text-5xl max-sm:text-4xl font-bold max-[460px]:text-3xl max-[370px]:text-2xl">
+                Hola, Soy 
+                <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">
+                    Sebxstt
+                </span>
+                 👋
+            </h1>
+            <p class="text-lg max-sm:text-base max-[460px]:text-sm max-[370px]:text-xs">
+                ¡Bienvenido a mi espacio digital! Soy un apasionado <span class="text-yellow-300">desarrollador web full stack</span> de <span class="text-yellow-300">18 años</span> con sede en <span class="text-yellow-300">Colombia</span>. Mi objetivo es fusionar <span class="text-yellow-300">creatividad y tecnología</span> para construir experiencias digitales impactantes.
+            </p>
+            <div class="">
+
+                <ButtonIntroduction class=" transition-all cursor-pointer hover:translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github-filled h-8 w-8 max-[460px]:h-6 max-[460px]:w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z" stroke-width="0" fill="currentColor" /></svg>
+                </ButtonIntroduction>
+
+                <ButtonIntroduction class=" transition-all cursor-pointer hover:translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail h-8 w-8 max-[460px]:h-6 max-[460px]:w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
+                </ButtonIntroduction>
+
+                <ButtonIntroduction class=" transition-all cursor-pointer hover:translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin h-8 w-8 max-[460px]:h-6 max-[460px]:w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+                </ButtonIntroduction>
+
+            </div>
+        </div>
+
+        <div id="content-image" class="shrink-0 max-md:mt-5">
+            <img
+            class="w-80 h-64 max-[460px]:w-60 max-[460px]:h-44" 
+            src="/favicon.svg" 
+            alt=""
+            >
+        </div>
+
+    </div>
+
+</Container>
+  
+<style>
+    #info{
+        transform: translateX(-100vw);
+        opacity: 0;
+        transition: all .9s ease-in-out;
+    }
+
+    #content-image{
+        transform: translateX(-100vw);
+        opacity: 0;
+        transition: all .9s ease-in-out;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(() => {
+            document.getElementById("info").style.transform = "translateX(0%)"
+            document.getElementById("content-image").style.transform = "translateX(0%)"
+            document.getElementById("info").style.opacity = "1"
+            document.getElementById("content-image").style.opacity = "1"
+        }, 100);
+    });
+</script>
+  
